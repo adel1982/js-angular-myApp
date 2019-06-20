@@ -1,3 +1,8 @@
 <h1>Home</h1>
 
-<button (click)="firstClick()")></button>
+<ul *ngIf="users">
+	<li *ngFor="let user of users.data">
+		<img [src]="user.avatar" alt="">
+		<p>{{ user.first_name }} {{ user.last_name }}</p>
+	</li>
+</ul>
